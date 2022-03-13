@@ -28,6 +28,7 @@ class MainActivityViewModel: ViewModel() {
         viewModelScope.launch {
             val response = rasaApiService.sendMessage(message)
             Log.e("Message", response.toString())
+
             if(response.code() == 200 && response.body() != null) {
                 response.body()!!.forEach{
                     it.time = Calendar.getInstance().time
