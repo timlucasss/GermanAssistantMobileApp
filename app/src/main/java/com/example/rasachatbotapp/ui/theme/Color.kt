@@ -7,4 +7,5 @@ val lighterblack = Color(0xFF212121) //color bubble, question
 val darkergrey = Color(0xFF3D3D3D)
 val grey = Color(0xFFAAAAAA)
 val white = Color(0xFFFFFFFF)
-val blue = Color(0xFF2D3470)
+val blue = Color(0xFF2D3685)
+var green = Color(0xFF2E8551)

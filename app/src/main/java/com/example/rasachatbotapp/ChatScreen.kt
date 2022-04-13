@@ -35,10 +35,12 @@ val message = mutableStateOf("")
 private val BotChatBubbleShape = RoundedCornerShape(0.dp, 8.dp, 8.dp, 8.dp)
 private val AuthorChatBubbleShape = RoundedCornerShape(8.dp, 0.dp, 8.dp, 8.dp)
 
+
+
 @Composable
 fun TopBarSection(
     username: String,
-    profile: Painter,
+    profile: Painter?,
     isOnline: Boolean
 ) {
     Card(
@@ -54,15 +56,17 @@ fun TopBarSection(
                 .padding(horizontal = 8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Image(
-                painter = profile,
-                contentDescription = null,
-                modifier = Modifier
-                    .size(40.dp)
-                    .clip(CircleShape)
+            if (profile != null) {
+                Image(
+                    painter = profile,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(40.dp)
+                        .clip(CircleShape)
 
 
-            )
+                )
+            }
 
             Spacer(modifier = Modifier.width(8.dp))
 
@@ -89,6 +93,7 @@ fun ChatSection(
         modifier = modifier
             .fillMaxSize()
             .padding(16.dp),
+
         reverseLayout = true
     ) {
         if (chats == null){
@@ -123,13 +128,7 @@ fun ChatSection(
 }
 
 @Composable
-fun MessageItem(
-    messageText: String?,
-    time: String,
-    image: String?,
-    buttons: List<RasaButton>?,
-    viewModel: MainActivityViewModel,
-    isOut: Boolean
+fun MessageItem(messageText: String?, time: String, image: String?, buttons: List<RasaButton>?, viewModel: MainActivityViewModel, isOut: Boolean
 ) {
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -181,7 +180,9 @@ fun MessageItem(
         Spacer(modifier = Modifier.height(4.dp))
         if(buttons != null){
             ShowButtons(buttons, viewModel)
+
         }
+
 
         Text(
             text = time,
@@ -198,6 +199,7 @@ fun ShowButtons(
     buttons: List<RasaButton>,
     viewModel: MainActivityViewModel
 ){
+
     LazyRow(
         modifier = Modifier.fillMaxWidth()
     ) {
