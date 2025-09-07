@@ -7,7 +7,7 @@ It is a chatbot that teaches German through conversation. Users interact with th
 
 ## Screenshot
 
-![Nick Chatbot Screenshot](./assets/GermanAssistant.png)  
+<img src="./assets/GermanAssistant.png" alt="Nick Chatbot Screenshot" width="400"/>
 
 *Example of the chatbot interface in the Android application.*
 
