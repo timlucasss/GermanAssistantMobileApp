@@ -5,6 +5,14 @@ It is a chatbot that teaches German through conversation. Users interact with th
 
 ---
 
+## Screenshot
+
+![Nick Chatbot Screenshot](./assets/GermanAssistant.png)  
+
+*Example of the chatbot interface in the Android application.*
+
+---
+
 ## Project Motivation
 - Create a fun, easy-to-use, and interactive learning assistant.  
 - Allow users to communicate with a chatbot through a mobile application anytime (24/7).  
